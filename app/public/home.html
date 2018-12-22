@@ -8,6 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
         body,
         h1,
         h5,
@@ -21,44 +31,55 @@
 </head>
 
 <body style="background-color:aqua">
-    <div class="slider">
-        <ul class="slides">
-            <li>
-                <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
-                <div class="caption center-align">
-                    <h3>Welcome to FriendFinder!</h3>
-                    <h5 class="light grey-text text-lighten-3">The easy match tool for friends.</h5>
-                </div>
-            </li>
-            <li>
-                <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
-                <div class="caption left-align">
-                    <h3>Based on Interests</h3>
-                    <h5 class="light grey-text text-lighten-3">Our algorithm matches you with people who align with your personality.</h5>
-                </div>
-            </li>
-            <li>
-                <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
-                <div class="caption right-align">
-                    <h3>Unique Questions</h3>
-                    <h5 class="light grey-text text-lighten-3">Our survey asks fun and engaging questions to determine what kind of person you would like to hang with.</h5>
-                </div>
-            </li>
-            <li>
-                <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
-                <div class="caption center-align">
-                    <h3>Proven Success</h3>
-                    <h5 class="light grey-text text-lighten-3">90% of our users find a match.</h5>
-                </div>
-            </li>
-        </ul>
-    </div>
-    &nbsp;
-    &nbsp;
-    <div>
-        <a class="btn waves-effect waves-light black white-text" href="http://localhost:8080/survey">Take Survey</a>
-    </div>
-
+    <main>
+        <div class="slider">
+            <ul class="slides">
+                <li>
+                    <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
+                    <div class="caption center-align">
+                        <h3>Welcome to FriendFinder!</h3>
+                        <h5 class="light grey-text text-lighten-3">The easy match tool for friends.</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+                    <div class="caption left-align">
+                        <h3>Based on Interests</h3>
+                        <h5 class="light grey-text text-lighten-3">Our algorithm matches you with people who align with
+                            your personality.</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+                    <div class="caption right-align">
+                        <h3>Unique Questions</h3>
+                        <h5 class="light grey-text text-lighten-3">Our survey asks fun and engaging questions to
+                            determine what kind of person you would like to hang with.</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
+                    <div class="caption center-align">
+                        <h3>Proven Success</h3>
+                        <h5 class="light grey-text text-lighten-3">90% of our users find a match.</h5>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        &nbsp;
+        &nbsp;
+        <div>
+            <a class="btn waves-effect waves-light black white-text" href="http://localhost:8080/survey">Take Survey</a>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 Aaron Rehlinger
+                <a class="grey-text text-lighten-4 right" href="http://localhost:8080/api/friends">Friends API</a>
+            </div>
+        </div>
+    </footer>
 
 
 
