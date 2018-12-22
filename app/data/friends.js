@@ -29,6 +29,51 @@ var friends = [
             3,
             2
         ]
+    },{
+        "name":"Jeffrey",
+        "photo":"https://www.orthopedicone.com/u/physician-photos/IMG_2198.jpg",
+        "scores":[
+            2,
+            3,
+            4,
+            5,
+            2,
+            1,
+            2,
+            2,
+            4,
+            3
+        ]
+    },{
+        "name":"Barry",
+        "photo":"http://www.thenonprofittimes.com/wp-content/uploads/2018/11/Barry-Rand-official-photo-5-2011-1-e1541803013129.jpg",
+        "scores":[
+            4,
+            3,
+            2,
+            5,
+            5,
+            2,
+            5,
+            4,
+            2,
+            5
+        ]
+    },{
+        "name":"Gordon",
+        "photo":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Official_portrait_of_Gordon_Marsden_crop_2.jpg/220px-Official_portrait_of_Gordon_Marsden_crop_2.jpg",
+        "scores":[
+            1,
+            2,
+            4,
+            3,
+            3,
+            3,
+            3,
+            2,
+            1,
+            3
+        ]
     }
 ];
 
