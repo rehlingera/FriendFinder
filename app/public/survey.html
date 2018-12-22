@@ -8,368 +8,209 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <style>
-        body, h1, h5, p, span {
-            font-weight:lighter;
-            text-align:center;
-            color:black;
+        body,
+        h1,
+        h5,
+        p,
+        span,
+        div {
+            font-weight: lighter;
+            text-align: center;
+            color: black;
         }
-        </style>
+    </style>
 </head>
 
 <body style="background-color:aqua">
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Here is Your Match!</h4>
+            <h6 id = "matchName"></h6>
+            <img id = "matchImg" src="https://www.simula.no/sites/default/files/styles/employee-detail/public/user/images/img_4912.jpg?itok=UyacJ0TA" alt="">
+            <p>Yes indeed!</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
     <h1>FriendFinder Survey</h1>
+    <div class="input-field" style="width:300px">
+        <input id="name" type="text" class="validate">
+        <label for="first_name">Your Name</label>
+    </div>
+    <div class="input-field" style="width:300px">
+        <input id="picLink" type="text" class="validate">
+        <label for="last_name">Link to Photo of You</label>
+    </div>
     <div id="questions">
         <h5>It is best to live in a place where you get all four seasons.</h5>
-        <form id="q1">
-            <p>
-                <label>
-                    <input name="group1" type="radio" />
-                    <span>1</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group1" type="radio" />
-                    <span>2</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group1" type="radio" />
-                    <span>3</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group1" type="radio" />
-                    <span>4</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group1" type="radio" />
-                    <span>5</span>
-                </label>
-            </p>
-        </form>
-        <p>1. Strongly Disagree &nbsp&nbsp|&nbsp&nbsp 2. Disagree &nbsp&nbsp|&nbsp&nbsp 3. No Opinion &nbsp&nbsp|&nbsp&nbsp 4. Agree &nbsp&nbsp|&nbsp&nbsp 5. Strongly Agree</p>
+        <div class="input-field" style="width:300px">
+            <select class="center" id="q1">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2 - Disagree</option>
+                <option value="3">3 - No Opinion</option>
+                <option value="4">4 - Agree</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+        </div>
         <br />
         <h5>Curling up with a book next to a fire is the best way to spend a Sunday night.</h5>
-        <form id="q2">
-            <p>
-                <label>
-                    <input name="group2" type="radio" />
-                    <span>1</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group2" type="radio" />
-                    <span>2</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group2" type="radio" />
-                    <span>3</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group2" type="radio" />
-                    <span>4</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group2" type="radio" />
-                    <span>5</span>
-                </label>
-            </p>
-        </form>
+        <div class="input-field" style="width:300px">
+            <select class="center" id="q2">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2 - Disagree</option>
+                <option value="3">3 - No Opinion</option>
+                <option value="4">4 - Agree</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+        </div>
         <br />
         <h5>Christmas starts immediately after Thanksgiving.</h5>
-        <form id="q3">
-            <p>
-                <label>
-                    <input name="group3" type="radio" />
-                    <span>1</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group3" type="radio" />
-                    <span>2</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group3" type="radio" />
-                    <span>3</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group3" type="radio" />
-                    <span>4</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group3" type="radio" />
-                    <span>5</span>
-                </label>
-            </p>
-        </form>
+        <div class="input-field" style="width:300px">
+            <select class="center" id="q3">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2 - Disagree</option>
+                <option value="3">3 - No Opinion</option>
+                <option value="4">4 - Agree</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+        </div>
         <br />
         <h5>Dogs and cats are equally great.</h5>
-        <form id="q4">
-            <p>
-                <label>
-                    <input name="group4" type="radio" />
-                    <span>1</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group4" type="radio" />
-                    <span>2</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group4" type="radio" />
-                    <span>3</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group4" type="radio" />
-                    <span>4</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group4" type="radio" />
-                    <span>5</span>
-                </label>
-            </p>
-        </form>
+        <div class="input-field" style="width:300px">
+            <select class="center" id="q4">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2 - Disagree</option>
+                <option value="3">3 - No Opinion</option>
+                <option value="4">4 - Agree</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+        </div>
         <br />
         <h5>A good inner circle of friends needs at least five people.</h5>
-        <form id="q5">
-            <p>
-                <label>
-                    <input name="group5" type="radio" />
-                    <span>1</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group5" type="radio" />
-                    <span>2</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group5" type="radio" />
-                    <span>3</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group5" type="radio" />
-                    <span>4</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group5" type="radio" />
-                    <span>5</span>
-                </label>
-            </p>
-        </form>
+        <div class="input-field" style="width:300px">
+            <select class="center" id="q5">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2 - Disagree</option>
+                <option value="3">3 - No Opinion</option>
+                <option value="4">4 - Agree</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+        </div>
         <br />
         <h5>I usually become friends with everyone I meet.</h5>
-        <form id="q6">
-            <p>
-                <label>
-                    <input name="group6" type="radio" />
-                    <span>1</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group6" type="radio" />
-                    <span>2</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group6" type="radio" />
-                    <span>3</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group6" type="radio" />
-                    <span>4</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group6" type="radio" />
-                    <span>5</span>
-                </label>
-            </p>
-        </form>
+        <div class="input-field" style="width:300px">
+            <select class="center" id="q6">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2 - Disagree</option>
+                <option value="3">3 - No Opinion</option>
+                <option value="4">4 - Agree</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+        </div>
         <br />
         <h5>If given the choice, I will always prefer to spend time outside more than inside.</h5>
-        <form id="q7">
-            <p>
-                <label>
-                    <input name="group7" type="radio" />
-                    <span>1</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group7" type="radio" />
-                    <span>2</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group7" type="radio" />
-                    <span>3</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group7" type="radio" />
-                    <span>4</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group7" type="radio" />
-                    <span>5</span>
-                </label>
-            </p>
-        </form>
+        <div class="input-field" style="width:300px">
+            <select class="center" id="q7">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2 - Disagree</option>
+                <option value="3">3 - No Opinion</option>
+                <option value="4">4 - Agree</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+        </div>
         <br />
         <h5>I literally laugh out loud when I read something funny.</h5>
-        <form id="q8">
-            <p>
-                <label>
-                    <input name="group8" type="radio" />
-                    <span>1</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group8" type="radio" />
-                    <span>2</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group8" type="radio" />
-                    <span>3</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group8" type="radio" />
-                    <span>4</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group8" type="radio" />
-                    <span>5</span>
-                </label>
-            </p>
-        </form>
+        <div class="input-field" style="width:300px">
+            <select class="center" id="q8">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2 - Disagree</option>
+                <option value="3">3 - No Opinion</option>
+                <option value="4">4 - Agree</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+        </div>
         <br />
         <h5>When meeting someone new, I like to talk about my job.</h5>
-        <form id="q9">
-            <p>
-                <label>
-                    <input name="group9" type="radio" />
-                    <span>1</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group9" type="radio" />
-                    <span>2</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group9" type="radio" />
-                    <span>3</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group9" type="radio" />
-                    <span>4</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group9" type="radio" />
-                    <span>5</span>
-                </label>
-            </p>
-        </form>
+        <div class="input-field" style="width:300px">
+            <select class="center" id="q9">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2 - Disagree</option>
+                <option value="3">3 - No Opinion</option>
+                <option value="4">4 - Agree</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+        </div>
         <br />
         <h5>I trust others easily.</h5>
-        <form id="q10">
-            <p>
-                <label>
-                    <input name="group10" type="radio" />
-                    <span>1</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group10" type="radio" />
-                    <span>2</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group10" type="radio" />
-                    <span>3</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group10" type="radio" />
-                    <span>4</span>
-                </label>
-                &nbsp;
-                &nbsp;
-                <label>
-                    <input name="group10" type="radio" />
-                    <span>5</span>
-                </label>
-            </p>
-        </form>
+        <div class="input-field" style="width:300px">
+            <select class="center" id="q10">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">1 - Strongly Disagree</option>
+                <option value="2">2 - Disagree</option>
+                <option value="3">3 - No Opinion</option>
+                <option value="4">4 - Agree</option>
+                <option value="5">5 - Strongly Agree</option>
+            </select>
+        </div>
     </div>
     &nbsp;
     &nbsp;
     <div>
-        <a class="btn waves-effect waves-light black white-text">Submit</a>
+        <a class="btn waves-effect waves-light black white-text modal-trigger" id="submit" href="#modal1">Submit</a>
     </div>
     &nbsp;
-    
+
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="../data/friends.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $('select').formSelect();
+            $('.modal').modal();
+
+            $("#submit").on("click", function () {
+                event.preventDefault();
+
+                console.log("Clicked");
+
+                var newFriend = {
+                    name: $("#name").val().trim(),
+                    photo: $("picLink").val(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                };
+                
+                $.post("/api/friends", newFriend, function (data) {
+                    console.log(newFriend);
+                    console.log(data);
+                    $("#matchName").text(data.name);
+                    $("#matchImg").attr("src", data.photo);
+                });
+            });
+        });
+    </script>
 
 </body>
 

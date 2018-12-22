@@ -1,7 +1,7 @@
 var friends = [
     {
         "name":"Ahmed",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"https://www.simula.no/sites/default/files/styles/employee-detail/public/user/images/img_4912.jpg?itok=UyacJ0TA",
         "scores":[
             5,
             1,
@@ -16,7 +16,7 @@ var friends = [
         ]
     },{
         "name":"Steve",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"https://www.rothamsted.ac.uk/sites/default/files/person-profile-images/steve-mcgrath.jpg",
         "scores":[
             3,
             2,
@@ -32,3 +32,4 @@ var friends = [
     }
 ];
 
+module.exports = friends;
