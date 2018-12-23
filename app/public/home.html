@@ -7,6 +7,7 @@
     <title>FriendFinder Survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Internal CSS -->
     <style>
         body {
             display: flex;
@@ -32,6 +33,7 @@
 
 <body style="background-color:aqua">
     <main>
+        <!-- Carousel -->
         <div class="slider">
             <ul class="slides" style="height:1000px">
                 <li>
@@ -68,10 +70,12 @@
         </div>
         &nbsp;
         &nbsp;
+        <!-- Survey Button -->
         <div>
             <a class="btn waves-effect waves-light black white-text" href="https://warm-dawn-60945.herokuapp.com/survey">Take Survey</a>
         </div>
     </main>
+    <!-- Footer -->
     <footer class="page-footer">
         <div class="footer-copyright">
             <div class="container">
@@ -88,6 +92,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
+        // Activate carousel
         $(document).ready(function () {
             $('.slider').slider();
         });

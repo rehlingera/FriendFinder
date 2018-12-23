@@ -7,6 +7,7 @@
     <title>FriendFinder Survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Internal CSS -->
     <style>
         body {
             display: flex;
@@ -35,8 +36,8 @@
     </style>
 </head>
 <main>
-
     <body style="background-color:aqua">
+        <!-- Modal -->
         <div id="modal1" class="modal">
             <div class="modal-content">
                 <h4>Here is Your Match!</h4>
@@ -49,6 +50,7 @@
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
             </div>
         </div>
+        <!-- Survey -->
         <h1>FriendFinder Survey</h1>
         <div class="input-field" style="width:300px">
             <input id="name" type="text" class="validate">
@@ -182,6 +184,7 @@
         &nbsp;
         &nbsp;
         <div>
+            <!-- Submit Button -->
             <a class="btn waves-effect waves-light black white-text modal-trigger" id="submit" href="#modal1">Submit</a>
         </div>
         &nbsp;
@@ -200,17 +203,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script>
-
+// When document is loaded...
     $(document).ready(function () {
-
+        // Activate drop-downs and modal
         $('select').formSelect();
         $('.modal').modal();
-
+        // When the Submit Button is clicked...
         $("#submit").on("click", function () {
             event.preventDefault();
-
-            console.log("Clicked");
-
+            // Make a newFriend object with the data supplied...
             var newFriend = {
                 name: $("#name").val().trim(),
                 photo: $("#picLink").val().trim(),
@@ -227,10 +228,8 @@
                     $("#q10").val()
                 ]
             };
-
+            // POST the newFriend object to the friends API...
             $.post("/api/friends", newFriend, function (data) {
-                console.log(newFriend);
-                console.log(data);
                 $("#matchName").text(data.name);
                 $("#matchImg").attr("src", data.photo);
             });
